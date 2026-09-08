@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fairy Ring — 377 countdown</title>
+  <title>Fairy Ring — development progress</title>
   <meta name="description" content="Fairy Ring rev 377 content countdown. Derived from Lost City open work — not official Lost City or Jagex.">
   <style>
     :root {
@@ -51,20 +51,50 @@
     h2 { font-size: 1.15rem; margin: 1.75rem 0 0.4rem; }
     p.lead { color: var(--muted); }
     footer { color: var(--muted); font-size: 0.85rem; padding: 2rem 1.25rem 3rem; }
-    a { color: #c5d4b8; }
+    a { color: #c5d4b8; text-underline-offset: 0.2em; }
+    body { background: radial-gradient(ellipse at top, #202b1e 0, var(--bg) 36rem); }
+    header, main, footer { max-width: 62rem; }
+    header { padding-top: 3.5rem; }
+    h1 { font-size: clamp(2.7rem, 6vw, 4rem); letter-spacing: -0.035em; }
+    .eyebrow, .header-meta, th, .tag, summary { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .eyebrow { color: var(--spine); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin: 0 0 0.8rem; }
+    .intro { font-size: 1.2rem; margin: 0.25rem 0 0.5rem; }
+    .header-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; border-top: 1px solid var(--line); padding: 1rem 0; color: var(--muted); font-size: 0.78rem; }
+    .bar { border-left: 3px solid var(--spine); padding: 1.3rem 1.4rem; }
+    h2 { margin-top: 2.5rem; font-size: 1.35rem; }
+    th, td { padding: 0.8rem 0.65rem; }
+    th:first-child, td:first-child { padding-left: 0; }
+    td:first-child { width: 25%; }
+    .tag { display: inline-block; font-size: 0.65rem; line-height: 1.5; }
+    tbody tr:hover { background: rgba(255,255,255,0.025); }
+    details { border: 1px solid var(--line); border-radius: 6px; padding: 0 1.1rem; margin: 1.2rem 0; background: rgba(26,33,24,0.5); }
+    summary { padding: 1rem 0; cursor: pointer; color: var(--ink); font-size: 0.88rem; }
+    summary:focus-visible, a:focus-visible { outline: 2px solid var(--spine); outline-offset: 4px; }
+    .quest-list td:first-child { width: 32%; }
+    footer { margin-top: 2.5rem; border-top: 1px solid var(--line); }
+    @media (max-width: 600px) {
+      header { padding-top: 2rem; }
+      th, td { padding: 0.7rem 0.35rem; }
+      table { font-size: 0.87rem; }
+      .bar { padding: 1rem; }
+      .quest-list td:first-child { width: 40%; }
+    }
     ul { padding-left: 1.2rem; }
     li { margin: 0.25rem 0; }
   </style>
 </head>
 <body>
   <header>
+    <p class="eyebrow">Revision 377 · May 2006</p>
     <h1>Fairy Ring</h1>
-    <p class="sub">Rev 377 (~2 May 2006) content countdown. Updated 8 September 2026. Derived from Lost City open work — not official Lost City or Jagex.</p>
+    <p class="intro">Rebuilding a world, one complete quest at a time.</p>
+    <p class="sub">Independent RuneScape preservation, building on Lost City’s open work.</p>
+    <div class="header-meta"><span>Development progress</span><time datetime="2026-09-08">Updated 8 September 2026</time></div>
   </header>
   <main>
     <div class="bars">
       <section class="bar">
-        <h2>Server door — 377 content-complete</h2>
+        <h2>Current milestone · M1</h2>
         <p><span class="status near">Quest behavior work is active.</span> The public world is not ready. We are finishing missing quest behavior before connected end-to-end validation; focused tests and existing source trees do not establish complete quests.</p>
       </section>
     </div>
@@ -74,7 +104,7 @@
       <thead><tr><th>Unit</th><th>Status</th><th>What that means</th></tr></thead>
       <tbody>
         <tr><td>Recruitment Drive: Lady Table</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Correct and wrong choices, retry, incomplete exit gates and separate player instances passed focused live checks and source review. Full quest completion is still open; fades remain provisional.</td></tr>
-        <tr><td>Recruitment Drive: combat and referral</td><td><span class="tag spine">IN PROGRESS</span></td><td>Sir Kuam / Sir Leye combat and Sir Amik’s referral dialogue. Combat work includes preventing damage and XP from historically invalid hits.</td></tr>
+        <tr><td>Recruitment Drive: combat and referral</td><td><span class="tag spine">IN PROGRESS</span></td><td>Sir Kuam / Sir Leye combat and Sir Amik’s referral dialogue. Combat work includes the historical restrictions and correct XP behavior.</td></tr>
         <tr><td>Recruitment Drive: remaining quest</td><td><span class="tag spine">OPEN</span></td><td>Admission rules, five-test selection, remaining trials, reset behavior, completion and rewards. Current partial routing is not the finished quest.</td></tr>
         <tr><td>Next quest work</td><td>Queued</td><td>Finish Recruitment Drive, then resume the residual quest order with Haunted Mine. Giant Dwarf’s opening cutscene remains a later visual reconstruction task.</td></tr>
       </tbody>
@@ -88,10 +118,10 @@
       <tbody>
         <tr><td>Residual quest behavior</td><td class="n">36</td><td>Progression, completion or rewards remain unfinished or unqualified.</td></tr>
         <tr><td>Other quests awaiting connected validation</td><td class="n">62</td><td>Source trees exist; full playthrough evidence remains outstanding.</td></tr>
-        <tr><td>Historical playthrough reports</td><td class="n">6</td><td>Prior reports for Cook’s Assistant, Sheep Shearer, Restless Ghost, Doric’s Quest, Witch’s Potion and Rune Mysteries. Evidence is retained and reviewed for the relevant build; these are not six fresh validations.</td></tr>
+        <tr><td>Historical playthrough reports</td><td class="n">6</td><td>Prior reports for Cook’s Assistant, Sheep Shearer, Restless Ghost, Doric’s Quest, Witch’s Potion and Rune Mysteries. The retained evidence still needs build-specific reconciliation; these are not six fresh validations.</td></tr>
       </tbody>
     </table>
-    <p class="lead">The former SHIP / SPINE / RED labels mixed source availability, starts and completion. A start or refusal is not proof of a complete quest. No whole-quest count was advanced by the statue work.</p>
+    <p class="lead">A start dialogue, refusal or source tree is not proof of a complete quest. The statue trial has not advanced the whole-quest completion count.</p>
 
     <h2>Milestones</h2>
     <ul>
@@ -100,49 +130,54 @@
       <li><strong>Acceptance:</strong> connected quest walks, multiplayer validation, dependent unlocks and final review.</li>
     </ul>
 
-    <h2>Residual quest detail</h2>
-    <p class="lead">Most entries below retain the August development snapshot and have not been freshly revalidated. Recruitment Drive reflects the September work above. Each row remains open until its required behavior and evidence are complete.</p>
-    <table>
-      <thead><tr><th>Quest</th><th>Recorded partial behavior</th><th>Remaining work</th></tr></thead>
-      <tbody>
-        <tr><td>One Small Favour</td><td>stage 45 · key ring · lamps · Use-key · Guthix rest brew + mix + Drink · vane dest</td><td>Kharazi N/W dest</td></tr>
-        <tr><td>Desert Treasure</td><td>8→10 · Look-into mirrors · hill Talk-to</td><td>Ancient Magicks, four-diamond return</td></tr>
-        <tr><td>Ghosts Ahoy</td><td>stage 3 · tea / porcelain / milk · pay-25 island · Ectophial Empty + refill · Worship chrome</td><td>award, return dest</td></tr>
-        <tr><td>Between a Rock…</td><td>stay 10, gold cannonball, Fire dest, statue-crack to ferryman cave, return dest</td><td>complete 110, schematic interface</td></tr>
-        <tr><td>Enakhra’s Lament</td><td>statue slim + head place, stay 1</td><td>Camulet, complete 10</td></tr>
-        <tr><td>Making History</td><td>start + two field tracks + Erin key</td><td>wrap, dest</td></tr>
-        <tr><td>Garden of Tranquillity</td><td>0→1 + list · farmer pay</td><td>plants</td></tr>
-        <tr><td>Mourning’s End Part I</td><td>0→1 · letter Read</td><td>dest, crystal</td></tr>
-        <tr><td>Cabin Fever</td><td>0→1 · Cross in/out · Let's-go battle floor</td><td>battle set later</td></tr>
-        <tr><td>Rum Deal</td><td>0→1</td><td>still / dest</td></tr>
-        <tr><td>A Fairy Tale Part I</td><td>stay 6</td><td>Tanglefoot, complete 10</td></tr>
-        <tr><td>Recipe for Disaster</td><td>1→2 · kitchen dest · Inspect Pete</td><td>guests</td></tr>
-        <tr><td>Recruitment Drive</td><td>Tiffy entry · fox puzzle · Lady Table statue slice validated</td><td>combat/referral in progress; trial selection, other trials, completion and rewards still open</td></tr>
-        <tr><td>Mountain Daughter</td><td>stay 1 · Hamal · Ragnar · Push refuse · abseil dest · Kendal dump</td><td>pool Listen (unplaced)</td></tr>
-        <tr><td>Haunted Mine</td><td>0→1 · Check panel chrome · Zealot pickpocket lift-key</td><td>cart dest</td></tr>
-        <tr><td>Ratcatchers</td><td>sisters refuse · Felkrash name chrome</td><td>pits, complete stage</td></tr>
-        <tr><td>Tears of Guthix</td><td>Juna loc + Talk-to · Water Collected overlay</td><td>weekly XP</td></tr>
-        <tr><td>Roving Elves</td><td>0→1 Islwyn · Eluned briefing 1→2 · seed transform</td><td>plant dest, complete</td></tr>
-        <tr><td>Creature of Fenkenstrain</td><td>signpost Read · Dr interview 0→1 · gardener dump</td><td>woods dest, Dig grave</td></tr>
-        <tr><td>The Feud</td><td>0→1 Ali Morrisane · Pollniv dump through Ali M report · celebrate talks · champion / Tough Guy drops · seller vis dump</td><td>complete vis, dest</td></tr>
-        <tr><td>Icthlarin’s Little Helper</td><td>0→1 Wanderer · later supplies dump</td><td>rock dest, Sophanem</td></tr>
-        <tr><td>Zogre Flesh Eaters</td><td>0→1 Grish · Uglug Relicym dump</td><td>dungeon dest, balm</td></tr>
-        <tr><td>The Giant Dwarf</td><td>0→1 mines Boatman · secretary dump · dest/cam deferred</td><td>city intro cam, dest</td></tr>
-        <tr><td>The Lost Tribe</td><td>0→1 Sigmund · Bob witness 1→2 · cellar Squeeze dest</td><td>mines leftover, treaty instance later</td></tr>
-        <tr><td>Forgettable Tale of a Drunken Dwarf</td><td>0→1 Veldaban</td><td>cutscene dest</td></tr>
-        <tr><td>A Tail of Two Cats</td><td>0→1 Unferth · Hild enchant</td><td>Sphinx</td></tr>
-        <tr><td>Shadow of the Storm</td><td>0→10 Father Reen · Badden Talk-to</td><td>Uzer dest</td></tr>
-        <tr><td>Spirits of the Elid</td><td>0→1 through plinth place (quest 60)</td><td>fountain dest (fill is a multi), leftover complete later</td></tr>
-        <tr><td>Devious Minds</td><td>start through Tiffy wrap talk</td><td>real quest-complete later, church dest</td></tr>
-        <tr><td>The Hand in the Sand</td><td>0→1 Bert · Guard Captain beer hand</td><td>guild bell, sandpit dest</td></tr>
-        <tr><td>In Aid of the Myreque</td><td>0→1 Veliaf (after Myreque I complete)</td><td>Burgh dest</td></tr>
-        <tr><td>A Soul’s Bane</td><td>0→1 Launa · rope attach · rage-room Enter</td><td>rage combat later</td></tr>
-        <tr><td>Rag and Bone Man</td><td>0→1 Odd Old Man</td><td>vinegar later</td></tr>
-        <tr><td>Swan Song</td><td>Herman Talk-to (QP 101 gate) · Draynor / colony WOM</td><td>tunnel dest</td></tr>
-        <tr><td>Wanted!</td><td>Tiffy after Recruitment Drive complete</td><td>RD rooms still residual</td></tr>
-        <tr><td>Mourning’s End Part II</td><td>Arianwyn after Part I complete (stage 9 CANDIDATE)</td><td>light puzzle, mine dest</td></tr>
-      </tbody>
-    </table>
+    <section id="quests">
+    <h2>Quest work remaining</h2>
+    <p class="lead">These 36 quests need remaining behavior completed or verified. Existing partial implementations are retained; the list describes what is needed to close each quest.</p>
+    <details>
+      <summary>View all 36 quest packages</summary>
+      <table class="quest-list">
+        <thead><tr><th>Quest</th><th>Work to close</th></tr></thead>
+        <tbody>
+          <tr><td>One Small Favour</td><td>Connect the favour chain, return journeys and final rewards.</td></tr>
+          <tr><td>Desert Treasure</td><td>Finish all four diamond branches and access to Ancient Magicks.</td></tr>
+          <tr><td>Ghosts Ahoy</td><td>Finish Ectofuntus processing, the quest conclusion and travel rewards.</td></tr>
+          <tr><td>Between a Rock…</td><td>Complete the mine, avatar encounter and final rewards.</td></tr>
+          <tr><td>Enakhra’s Lament</td><td>Complete the temple puzzles and Camulet reward.</td></tr>
+          <tr><td>Making History</td><td>Finish the investigation and return to Jorral.</td></tr>
+          <tr><td>Garden of Tranquillity</td><td>Complete the gardener tasks, plants and statue sequence.</td></tr>
+          <tr><td>Mourning’s End Part I</td><td>Finish the remaining quest chain and unlocks.</td></tr>
+          <tr><td>Cabin Fever</td><td>Complete the ship battle, repairs, plunder and rewards.</td></tr>
+          <tr><td>Rum Deal</td><td>Finish brewing, combat and the quest conclusion.</td></tr>
+          <tr><td>A Fairy Tale Part I</td><td>Complete the cure, tool preparation, Tanglefoot and rewards.</td></tr>
+          <tr><td>Recipe for Disaster</td><td>Complete every in-era guest rescue and final encounters.</td></tr>
+          <tr><td>Recruitment Drive</td><td>Finish combat, other trials, test selection and rewards.</td></tr>
+          <tr><td>Mountain Daughter</td><td>Complete the cave route, Kendal encounter and burial.</td></tr>
+          <tr><td>Haunted Mine</td><td>Complete mine traversal, cart puzzles, Treus Dayth and the salve reward.</td></tr>
+          <tr><td>Ratcatchers</td><td>Complete the cat quest and access to the rat pits.</td></tr>
+          <tr><td>Tears of Guthix</td><td>Complete the quest and repeatable tears session with earned XP.</td></tr>
+          <tr><td>Roving Elves</td><td>Complete consecration, planting and quest rewards.</td></tr>
+          <tr><td>Creature of Fenkenstrain</td><td>Complete the grave and body-assembly chain, ring and conclusion.</td></tr>
+          <tr><td>The Feud</td><td>Connect dialogue and combat progression through completion and rewards.</td></tr>
+          <tr><td>Icthlarin’s Little Helper</td><td>Complete travel, pyramid and ritual progression.</td></tr>
+          <tr><td>Zogre Flesh Eaters</td><td>Complete the investigation, dungeon, cures, combat and rewards.</td></tr>
+          <tr><td>The Giant Dwarf</td><td>Complete statue and Consortium progression; revisit the opening cutscene later.</td></tr>
+          <tr><td>The Lost Tribe</td><td>Complete mine navigation and the quest conclusion.</td></tr>
+          <tr><td>Forgettable Tale of a Drunken Dwarf</td><td>Complete brewing, story sequences and rewards.</td></tr>
+          <tr><td>A Tail of Two Cats</td><td>Complete the cat and Sphinx story chain.</td></tr>
+          <tr><td>Shadow of the Storm</td><td>Complete Uzer, the ritual, combat and rewards.</td></tr>
+          <tr><td>Spirits of the Elid</td><td>Complete the golem encounters, fountain and quest conclusion.</td></tr>
+          <tr><td>Devious Minds</td><td>Complete the delivery chain and verify the final reward.</td></tr>
+          <tr><td>The Hand in the Sand</td><td>Reconcile existing work and finish the investigation and sand reward.</td></tr>
+          <tr><td>In Aid of the Myreque</td><td>Complete Burgh de Rott progression and the remaining quest.</td></tr>
+          <tr><td>A Soul’s Bane</td><td>Complete all emotional chambers and the conclusion.</td></tr>
+          <tr><td>Rag and Bone Man</td><td>Complete collection, preparation and the in-era rewards.</td></tr>
+          <tr><td>Swan Song</td><td>Complete the colony defense and quest conclusion.</td></tr>
+          <tr><td>Wanted!</td><td>Complete the investigation and chase after Recruitment Drive.</td></tr>
+          <tr><td>Mourning’s End Part II</td><td>Complete the light puzzle and altar path after Part I.</td></tr>
+        </tbody>
+      </table>
+    </details>
+    </section>
 
     <h2>Skills, activities and interfaces</h2>
     <p>The source census contains 20 minigame directories and 17 in-era skill directories. That is an inventory, not functional acceptance. Farming coverage remains partial, Slayer has quest-dependent gaps, and inherited multiplayer activities still need validation.</p>
@@ -152,11 +187,11 @@
     <p>A Fairy Tale Part II, Royal Trouble, Trouble Brewing, Construction / player-owned houses. Those are after ~2 May 2006.</p>
 
     <h2>After 377</h2>
-    <p>This board is rev 377 only. Next target is revision 410 (~26 May 2006) after 377 is frozen — first post-overhaul cache, including Royal Trouble. Construction / player-owned houses are 412 (31 May 2006). Do not grow this page into a multi-rev roadmap; start a new board when 377 closes.</p>
+    <p>This board is rev 377 only. Next target is revision 410 (~26 May 2006) after 377 is frozen — first post-overhaul cache, including Royal Trouble. Construction / player-owned houses are 412 (31 May 2006). That future track is separate from completing revision 377.</p>
   </main>
   <footer>
-    <p>Source of truth lives in the Fairy Ring vault. This page is the thin public copy. Repos: <a href="https://github.com/Fairy-Ring">github.com/Fairy-Ring</a>.</p>
-    <p>RuneScape is Jagex’s. We describe a historical revision. We do not claim that brand.</p>
+    <p>Progress updates follow completed quests and other meaningful development milestones. <a href="https://github.com/Fairy-Ring">Explore the source on GitHub ↗</a></p>
+    <p>Derived from Lost City / LostCityRS open work. Not an official Lost City or Jagex product. RuneScape belongs to Jagex.</p>
   </footer>
 </body>
 </html>
