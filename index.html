@@ -95,7 +95,7 @@
     <div class="bars">
       <section class="bar">
         <h2>Current milestone · M1</h2>
-        <p><span class="status near">Quest behavior work is active.</span> The public world is not ready. We are finishing missing quest behavior before connected end-to-end validation; focused tests and existing source trees do not establish complete quests.</p>
+        <p><span class="status near">Quest behavior work is active.</span> The public world is not ready. We are finishing missing quest behavior and qualifying connected runs. Each validated result retains its stated preparation and coverage limits; M1 remains open.</p>
       </section>
     </div>
 
@@ -103,14 +103,16 @@
     <table>
       <thead><tr><th>Unit</th><th>Status</th><th>What that means</th></tr></thead>
       <tbody>
-        <tr><td>Recruitment Drive: Lady Table</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Correct and wrong choices, retry, incomplete exit gates and separate player instances passed focused live checks and source review. Full quest completion is still open; fades remain provisional.</td></tr>
+        <tr><td>Recruitment Drive: Lady Table</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Correct and wrong choices, retry, incomplete exit gates and separate player instances passed focused live checks and source review. Fades remain provisional.</td></tr>
         <tr><td>Recruitment Drive: combat</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Sir Leye’s male immunity, female victory, exit gates, retry and player isolation passed focused live checks. An ordinary-NPC control also checked XP behavior.</td></tr>
         <tr><td>Recruitment Drive: Sir Tinley</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Waiting succeeds; moving or talking again fails. The successful run crossed the door and advanced to the next trial. His idle animation now plays without sliding.</td></tr>
         <tr><td>Recruitment Drive: Hynn’s riddles</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All five correct answers passed focused live checks, alongside wrong-answer cases, the exit door and onward portal.</td></tr>
         <tr><td>Recruitment Drive: chemistry</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real searches and reactions produced the bronze key, unlocked the exit and advanced to the next trial. All four book spreads were inspected. A wrong-mixture and finite-shelf case also passed; complete retry coverage remains open.</td></tr>
         <tr><td>Recruitment Drive: rewards and recovery</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The final-trial handoff survived logging out; Tiffy awarded the rewards once, including exactly 1,000.5 XP in each reward skill. The completion scroll, pending-claim death recovery and Falador respawn also passed focused checks. Earlier trials and death causes were test fixtures.</td></tr>
-        <tr><td>Recruitment Drive: remaining quest</td><td><span class="tag spine">OPEN</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed. The complete five-test assessment and remaining trial, lifecycle and service cases stay open.</td></tr>
+        <tr><td>Recruitment Drive: remaining quest</td><td><span class="tag spine">OPEN</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed. Same-account trial retries and remaining lifecycle cases stay open.</td></tr>
+        <tr><td>Recruitment Drive: connected assessment</td><td><span class="tag ship">VALIDATED RUN</span></td><td>Five product-selected trials, Tiffy handoff, exact rewards, clean relog and repeat no-award checks passed in one connected run. Prerequisites and character preparation were test setup; historical reconstruction limits and remaining edge cases still apply.</td></tr>
         <tr><td>Haunted Mine: mine traversal</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Four entrance round trips, the ridge cart, eight ladder pairs and both dark/light stair routes passed real interaction checks. Starting positions and the stair-test fungus were prepared fixtures; exact landings remain source-backed reconstructions. Fungus transport, cart puzzles, the lift, boss and rewards remain open.</td></tr>
+        <tr><td>Haunted Mine: quest-start persistence</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Zealot refusal, acceptance and re-talk passed real dialogue checks. Earned quest progress survived clean logout and login after a persistence fix. This covers the quest start; the complete mine quest remains open.</td></tr>
         <tr><td>Haunted Mine: glowing fungus</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Both mushroom types, repeat pickup, inventory-space refusal and dropping to ashes passed live checks. Picked fungus survived an internal ladder and became ashes on leaving the mine; a prepared death case confirmed it was neither kept nor dropped. Lifecycle behavior is a reconstruction from later sources. Cart delivery and the complete quest remain open.</td></tr>
       </tbody>
     </table>
@@ -155,7 +157,7 @@
           <tr><td>Rum Deal</td><td>Finish brewing, combat and the quest conclusion.</td></tr>
           <tr><td>A Fairy Tale Part I</td><td>Complete the cure, tool preparation, Tanglefoot and rewards.</td></tr>
           <tr><td>Recipe for Disaster</td><td>Complete every in-era guest rescue and final encounters.</td></tr>
-          <tr><td>Recruitment Drive</td><td>Connect the full assessment and validate remaining trial, lifecycle and service cases.</td></tr>
+          <tr><td>Recruitment Drive</td><td>Connected assessment validated with prepared prerequisites; finish remaining trial retries and lifecycle checks.</td></tr>
           <tr><td>Mountain Daughter</td><td>Complete the cave route, Kendal encounter and burial.</td></tr>
           <tr><td>Haunted Mine</td><td>Complete mine traversal, cart puzzles, Treus Dayth and the salve reward.</td></tr>
           <tr><td>Ratcatchers</td><td>Complete the cat quest and access to the rat pits.</td></tr>
