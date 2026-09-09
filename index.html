@@ -70,6 +70,9 @@
     details { border: 1px solid var(--line); border-radius: 6px; padding: 0 1.1rem; margin: 1.2rem 0; background: rgba(26,33,24,0.5); }
     summary { padding: 1rem 0; cursor: pointer; color: var(--ink); font-size: 0.88rem; }
     summary:focus-visible, a:focus-visible { outline: 2px solid var(--spine); outline-offset: 4px; }
+    .work-unit summary strong { font-size: 1rem; margin-right: 0.65rem; }
+    .unit-summary { display: block; color: var(--muted); margin: 0.45rem 0; }
+    .unit-toggle { color: #c5d4b8; font-size: 0.78rem; text-decoration: underline; text-underline-offset: 0.2em; }
     .quest-list td:first-child { width: 32%; }
     footer { margin-top: 2.5rem; border-top: 1px solid var(--line); }
     @media (max-width: 600px) {
@@ -100,24 +103,35 @@
     </div>
 
     <h2>Current work</h2>
-    <table>
-      <thead><tr><th>Unit</th><th>Status</th><th>What that means</th></tr></thead>
-      <tbody>
-        <tr><td>Recruitment Drive: Lady Table</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Correct and wrong choices, retry, incomplete exit gates and separate player instances passed focused live checks and source review. Fades remain provisional.</td></tr>
-        <tr><td>Recruitment Drive: combat</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Sir Leye’s male immunity, female victory, exit gates, retry and player isolation passed focused live checks. An ordinary-NPC control also checked XP behavior.</td></tr>
-        <tr><td>Recruitment Drive: Sir Tinley</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Waiting succeeds; moving or talking again fails. The successful run crossed the door and advanced to the next trial. His idle animation now plays without sliding.</td></tr>
-        <tr><td>Recruitment Drive: Hynn’s riddles</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All five correct answers passed focused live checks, alongside wrong-answer cases, the exit door and onward portal.</td></tr>
-        <tr><td>Recruitment Drive: chemistry</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real searches and reactions produced the bronze key, unlocked the exit and advanced to the next trial. All four book spreads were inspected. A wrong-mixture and finite-shelf case also passed; complete retry coverage remains open.</td></tr>
-        <tr><td>Recruitment Drive: rewards and recovery</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The final-trial handoff survived logging out; Tiffy awarded the rewards once, including exactly 1,000.5 XP in each reward skill. The completion scroll, pending-claim death recovery and Falador respawn also passed focused checks. Earlier trials and death causes were test fixtures.</td></tr>
-        <tr><td>Recruitment Drive: remaining quest</td><td><span class="tag spine">OPEN</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed. Same-account trial retries and remaining lifecycle cases stay open.</td></tr>
-        <tr><td>Recruitment Drive: start and admission</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real Amik referral, male and female start state, journal text and Tiffy introduction survived clean relog checks. Prerequisite, carried-item and worn-item refusals and empty admission passed. Prerequisites and items were prepared fixtures. Shared journal wrapping passed active and completed page checks.</td></tr>
-        <tr><td>Recruitment Drive: trial music</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Instance entry selects and unlocks The Chosen in automatic mode, preserves manual selection, and restores Falador music after clean relog. Live client selection and saved unlock checks passed.</td></tr>
-        <tr><td>Recruitment Drive: connected assessment</td><td><span class="tag ship">VALIDATED RUN</span></td><td>Connected runs passed five product-selected trials, Tiffy handoff, exact rewards and repeat no-award checks. A fresh-world run also verified the first instance and the makeover voucher after starting male and changing appearance. Prerequisites and character preparation were test setup; historical and remaining edge-case limits still apply.</td></tr>
-        <tr><td>Haunted Mine: mine traversal</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Four entrance round trips, the ridge cart, eight ladder pairs and both dark/light stair routes passed real interaction checks. Starting positions and the stair-test fungus were prepared fixtures; exact landings remain source-backed reconstructions. Fungus transport, cart puzzles, the lift, boss and rewards remain open.</td></tr>
-        <tr><td>Haunted Mine: quest-start persistence</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Zealot refusal, acceptance and re-talk passed real dialogue checks. Earned quest progress survived clean logout and login after a persistence fix. This covers the quest start; the complete mine quest remains open.</td></tr>
-        <tr><td>Haunted Mine: glowing fungus</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Both mushroom types, repeat pickup, inventory-space refusal and dropping to ashes passed live checks. Picked fungus survived an internal ladder and became ashes on leaving the mine; a prepared death case confirmed it was neither kept nor dropped. Lifecycle behavior is a reconstruction from later sources. Cart delivery and the complete quest remain open.</td></tr>
-      </tbody>
-    </table>
+    <details class="work-unit">
+      <summary><strong>Recruitment Drive</strong> <span class="tag spine">IN PROGRESS</span><span class="unit-summary">Connected assessment and focused checks passed; trial retries and lifecycle checks remain open.</span><span class="unit-toggle">View detailed progress</span></summary>
+      <table>
+        <thead><tr><th>Area</th><th>Status</th><th>What that means</th></tr></thead>
+        <tbody>
+        <tr><td>Lady Table</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Correct and wrong choices, retry, incomplete exit gates and separate player instances passed focused live checks and source review. Fades remain provisional.</td></tr>
+        <tr><td>combat</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Sir Leye’s male immunity, female victory, exit gates, retry and player isolation passed focused live checks. An ordinary-NPC control also checked XP behavior.</td></tr>
+        <tr><td>Sir Tinley</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Waiting succeeds; moving or talking again fails. The successful run crossed the door and advanced to the next trial. His idle animation now plays without sliding.</td></tr>
+        <tr><td>Hynn’s riddles</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All five correct answers passed focused live checks, alongside wrong-answer cases, the exit door and onward portal.</td></tr>
+        <tr><td>chemistry</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real searches and reactions produced the bronze key, unlocked the exit and advanced to the next trial. All four book spreads were inspected. A wrong-mixture and finite-shelf case also passed; complete retry coverage remains open.</td></tr>
+        <tr><td>rewards and recovery</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The final-trial handoff survived logging out; Tiffy awarded the rewards once, including exactly 1,000.5 XP in each reward skill. The completion scroll, pending-claim death recovery and Falador respawn also passed focused checks. Earlier trials and death causes were test fixtures.</td></tr>
+        <tr><td>remaining quest</td><td><span class="tag spine">OPEN</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed. Same-account trial retries and remaining lifecycle cases stay open.</td></tr>
+        <tr><td>start and admission</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real Amik referral, male and female start state, journal text and Tiffy introduction survived clean relog checks. Prerequisite, carried-item and worn-item refusals and empty admission passed. Prerequisites and items were prepared fixtures. Shared journal wrapping passed active and completed page checks.</td></tr>
+        <tr><td>trial music</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Instance entry selects and unlocks The Chosen in automatic mode, preserves manual selection, and restores Falador music after clean relog. Live client selection and saved unlock checks passed.</td></tr>
+        <tr><td>connected assessment</td><td><span class="tag ship">VALIDATED RUN</span></td><td>Connected runs passed five product-selected trials, Tiffy handoff, exact rewards and repeat no-award checks. A fresh-world run also verified the first instance and the makeover voucher after starting male and changing appearance. Prerequisites and character preparation were test setup; historical and remaining edge-case limits still apply.</td></tr>
+        </tbody>
+      </table>
+    </details>
+    <details class="work-unit">
+      <summary><strong>Haunted Mine</strong> <span class="tag spine">IN PROGRESS</span><span class="unit-summary">Quest start, traversal and fungus checks passed; cart puzzles, lift, boss and rewards remain open.</span><span class="unit-toggle">View detailed progress</span></summary>
+      <table>
+        <thead><tr><th>Area</th><th>Status</th><th>What that means</th></tr></thead>
+        <tbody>
+        <tr><td>mine traversal</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Four entrance round trips, the ridge cart, eight ladder pairs and both dark/light stair routes passed real interaction checks. Starting positions and the stair-test fungus were prepared fixtures; exact landings remain source-backed reconstructions. Fungus transport, cart puzzles, the lift, boss and rewards remain open.</td></tr>
+        <tr><td>quest-start persistence</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Zealot refusal, acceptance and re-talk passed real dialogue checks. Earned quest progress survived clean logout and login after a persistence fix. This covers the quest start; the complete mine quest remains open.</td></tr>
+        <tr><td>glowing fungus</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Both mushroom types, repeat pickup, inventory-space refusal and dropping to ashes passed live checks. Picked fungus survived an internal ladder and became ashes on leaving the mine; a prepared death case confirmed it was neither kept nor dropped. Lifecycle behavior is a reconstruction from later sources. Cart delivery and the complete quest remain open.</td></tr>
+        </tbody>
+      </table>
+    </details>
     <p class="lead">These are development results, not a claim that all changes have been released in the public source repositories. TypeScript remains the current testing client; the planned Rust replacement must pass parity checks before becoming the default.</p>
 
     <h2>Quest inventory</h2>
