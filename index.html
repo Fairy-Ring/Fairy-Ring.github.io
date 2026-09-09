@@ -104,7 +104,7 @@
 
     <h2>Current work</h2>
     <details class="work-unit">
-      <summary><strong>Recruitment Drive</strong> <span class="tag spine">IN PROGRESS</span><span class="unit-summary">Connected assessment, chemistry retry, armour eligibility and two-player lifecycle checks passed; remaining edge checks stay open.</span><span class="unit-toggle">View detailed progress</span></summary>
+      <summary><strong>Recruitment Drive</strong> <span class="tag ship">M1 QUALIFIED</span><span class="unit-summary">Quest behavior qualified through connected and focused live runs, including both fox failures and real retries. Full walking-route validation remains a later milestone.</span><span class="unit-toggle">View detailed progress</span></summary>
       <table>
         <thead><tr><th>Area</th><th>Status</th><th>What that means</th></tr></thead>
         <tbody>
@@ -114,7 +114,8 @@
         <tr><td>Hynn’s riddles</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All five correct answers passed focused live checks, alongside wrong-answer cases, the exit door and onward portal.</td></tr>
         <tr><td>chemistry</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real searches and reactions produced the bronze key, unlocked the exit and advanced to the next trial. All four book spreads were inspected. A wrong mixture exhausted the shelf; real quit and readmission reset supplies, and the same account completed the chemistry retry. Route selection and prior-room progress were disclosed test fixtures.</td></tr>
         <tr><td>rewards and recovery</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The final-trial handoff survived logging out; Tiffy awarded the rewards once, including exactly 1,000.5 XP in each reward skill. The completion scroll, pending-claim death recovery and Falador respawn also passed focused checks. Earlier trials and death causes were test fixtures.</td></tr>
-        <tr><td>remaining quest</td><td><span class="tag spine">OPEN</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed. Other unqualified edge cases stay open.</td></tr>
+        <tr><td>riddles and services</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All six Sir Ren combinations passed focused checks. Gaze dialogue and switching, individual armour and full-set purchases, insufficient-funds and inventory-space refusals, and earned makeover voucher redemption also passed.</td></tr>
+        <tr><td>fox failures and retry</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Carrying grain left the fox to eat the chicken; carrying the fox left the chicken to eat the grain. Both real bridge failures returned the player to Falador, cleared trial state and items, preserved the sampled quest state and XP, and allowed real Tiffy readmission. Route selection and room positioning were disclosed fixtures. Final source and evidence review qualified the agreed M1 behavior; fades remain provisional.</td></tr>
         <tr><td>Initiate armour</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All three pieces refused wear before quest completion and, separately, below Defence 20. An earned completion account equipped, retained through relog and removed all three pieces. Items and Defence levels were prepared fixtures.</td></tr>
         <tr><td>two-player lifecycle</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Two players entered separate trial rooms. Clean logout, same-account readmission and real portal quits preserved the other occupied room. A separate death-and-retry run confirmed normal Lumbridge respawn, trial-state cleanup and Tiffy readmission while the other room stayed intact. Both accounts logged out cleanly. A separate disconnect run preserved the active test through a short reconnect and real interaction, then confirmed instance deletion before a fresh login, park reset and Tiffy readmission. Prerequisites, travel, lethal damage and connection interruptions were disclosed fixtures. A Java-grounded player-update wire fix also passed a co-location check.</td></tr>
         <tr><td>start and admission</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Real Amik referral, male and female start state, journal text and Tiffy introduction survived clean relog checks. Prerequisite, carried-item and worn-item refusals and empty admission passed. Prerequisites and items were prepared fixtures. Shared journal wrapping passed active and completed page checks. An overflowing Amik choice caption now fits; both accept and decline outcomes passed live checks.</td></tr>
@@ -144,16 +145,17 @@
     <p class="lead">These are development results, not a claim that all changes have been released in the public source repositories. Rust must pass parity checks before becoming the default.</p>
 
     <h2>Quest inventory</h2>
-    <p class="lead">104 questlist rows, reconciled on 8 September. These categories describe remaining work, not a completion percentage.</p>
+    <p class="lead">104 questlist rows. The 8 September inventory is updated here for Recruitment Drive’s M1 qualification. These categories describe evidence and remaining work, not a completion percentage.</p>
     <table>
       <thead><tr><th>Category</th><th class="n">Count</th><th>Meaning</th></tr></thead>
       <tbody>
-        <tr><td>Residual quest behavior</td><td class="n">36</td><td>Progression, completion or rewards remain unfinished or unqualified.</td></tr>
+        <tr><td>Residual quest behavior</td><td class="n">35</td><td>Progression, completion or rewards remain unfinished or unqualified.</td></tr>
+        <tr><td>M1 quest behavior qualified</td><td class="n">1</td><td>Recruitment Drive passed the agreed connected and focused checks with disclosed preparation. Full walking-route validation remains outstanding.</td></tr>
         <tr><td>Other quests awaiting connected validation</td><td class="n">62</td><td>Source trees exist; full playthrough evidence remains outstanding.</td></tr>
         <tr><td>Historical playthrough reports</td><td class="n">6</td><td>Prior reports for Cook’s Assistant, Sheep Shearer, Restless Ghost, Doric’s Quest, Witch’s Potion and Rune Mysteries. The retained evidence still needs build-specific reconciliation; these are not six fresh validations.</td></tr>
       </tbody>
     </table>
-    <p class="lead">A start dialogue, refusal or source tree is not proof of a complete quest. The focused trial results have not advanced the whole-quest completion count.</p>
+    <p class="lead">A start dialogue, refusal or source tree is not proof of a complete quest. M1 qualification does not count as a new full walking playthrough.</p>
 
     <h2>Milestones</h2>
     <ul>
@@ -164,9 +166,9 @@
 
     <section id="quests">
     <h2>Quest work remaining</h2>
-    <p class="lead">These 36 quests need remaining behavior completed or verified. Existing partial implementations are retained; the list describes what is needed to close each quest.</p>
+    <p class="lead">These 35 quests need remaining behavior completed or verified. Existing partial implementations are retained; the list describes what is needed to close each quest.</p>
     <details>
-      <summary>View all 36 quest packages</summary>
+      <summary>View all 35 quest packages</summary>
       <table class="quest-list">
         <thead><tr><th>Quest</th><th>Work to close</th></tr></thead>
         <tbody>
@@ -182,7 +184,6 @@
           <tr><td>Rum Deal</td><td>Finish brewing, combat and the quest conclusion.</td></tr>
           <tr><td>A Fairy Tale Part I</td><td>Complete the cure, tool preparation, Tanglefoot and rewards.</td></tr>
           <tr><td>Recipe for Disaster</td><td>Complete every in-era guest rescue and final encounters.</td></tr>
-          <tr><td>Recruitment Drive</td><td>Connected assessment validated with prepared prerequisites; finish remaining trial retries and lifecycle checks.</td></tr>
           <tr><td>Mountain Daughter</td><td>Complete the cave route, Kendal encounter and burial.</td></tr>
           <tr><td>Haunted Mine</td><td>Complete mine traversal, cart puzzles, Treus Dayth and the salve reward.</td></tr>
           <tr><td>Ratcatchers</td><td>Complete the cat quest and access to the rat pits.</td></tr>
