@@ -1,16 +1,9 @@
-# Public 377 countdown (thin)
+# Fairy Ring — revision 377 progress
 
-**Vault truth:** [`../../gap/003-content-complete-countdown.md`](../../gap/003-content-complete-countdown.md)  
-**This folder:** token-light board for org GitHub Pages. No laptop paths. No smoke account ids. No leftover-hunt filenames.
+The public development board is at [fairy-ring.github.io](https://fairy-ring.github.io/).
 
-Ship:
+Updated 9 September 2026. Quest behavior work is active; the public world is not ready. Focused tests, historical playthrough reports and full quest acceptance are distinguished on the board.
 
-| File | Role |
-|------|------|
-| `index.html` | Human board (server door = 377 content-complete; maintainers e2e) |
+Fairy Ring independently preserves historical RuneScape revision 377, approximately 2 May 2006, building on Lost City / LostCityRS open work. This is not an official Lost City or Jagex product.
 
-**Hop fold:** refresh `index.html` if gap **003** flipped, then `bash scripts/publish-public-board.sh --push` (this folder → `Fairy-Ring/Fairy-Ring.github.io` → `https://fairy-ring.github.io/`).  
-**Full shebang** (thin workspace **and** board): `bash scripts/closeout-public.sh` — only when the export surface changed or the operator asks. Do not rerun the thin export every hop.  
-Do **not** put the full vault `docs/research/` on Pages (Decision **011**).
-
-Refresh the HTML **same turn** the vault scoreboard flips a RED or SPINE row, or a SHIP e2e walk lands. No smoke account ids.
+This repository contains the public status page. It does not contain private execution records, test accounts or the complete research archive.
