@@ -92,14 +92,14 @@
     <h1>Fairy Ring</h1>
     <p class="intro">Rebuilding a world, one complete quest at a time.</p>
     <p class="sub">Independent RuneScape preservation, building on Lost City’s open work.</p>
-    <div class="header-meta"><span>Development progress</span><time datetime="2026-11-03">Updated 3 November 2026</time></div>
+    <div class="header-meta"><span>Development progress</span><time datetime="2026-11-04">Updated 4 November 2026</time></div>
   </header>
   <main>
     <div class="bars">
       <section class="bar">
         <h2>Development resumed</h2>
         <p><span class="status near">Work on revision 377 resumed on 3 November 2026.</span></p>
-        <p>Lost City’s revision-377 changes up to October 2026 are now merged: the August update, the repaired Uzer maps, the Curator’s statuette key and the Slayer fixes. Every quest that previously passed a complete start-to-finish walk passed it again on the updated content, and the new fixes were checked in game. In progress: Haunted Mine, now drawing on Lost City’s new version of the quest, and the research notes behind the remaining quests. Then come Recruitment Drive’s and Creature of Fenkenstrain’s open steps, the other unfinished quests below, and a native client. The source repositories stay private for now and will reopen closer to completion.</p>
+        <p>Lost City’s revision-377 changes up to October 2026 are now merged: the August update, the repaired Uzer maps, the Curator’s statuette key and the Slayer fixes. Every quest that previously passed a complete start-to-finish walk passed it again on the updated content, and the new fixes were checked in game. Haunted Mine is now complete, built on Lost City’s new version of the quest and checked against 2006 screenshots and guides. In progress: the research notes behind the remaining quests and the first pieces of a native 377 client. Next come Recruitment Drive’s and Creature of Fenkenstrain’s open steps and the other unfinished quests below. The source repositories stay private for now and will reopen closer to completion.</p>
       </section>
     </div>
 
@@ -126,18 +126,16 @@
       </table>
     </details>
     <details class="work-unit">
-      <summary><strong>Haunted Mine</strong> <span class="tag spine">IN PROGRESS</span><span class="unit-summary">Quest start, traversal, fungus, lever persistence, Salve stringing, prepared combat checks and a prepared reward sequence passed; cart delivery, lift, boss and the complete quest route remain open. Lost City has since added its own Haunted Mine; it is being compared with this reconstruction and with newly found 2006 screenshots before the quest is finished.</span><span class="unit-toggle">View detailed progress</span></summary>
+      <summary><strong>Haunted Mine</strong> <span class="tag ship">M1 QUALIFIED</span><span class="unit-summary">A fresh account played the whole quest in one continuous live run, from the Zealot to the crystal reward, without quest-stage shortcuts. Focused checks covered the cart puzzle, lift, stairs, fungus, the boss and the reward doors. The quest now follows Lost City’s version where our research found nothing better, keeping the 377 interface and the period 35 Crafting requirement.</span><span class="unit-toggle">View detailed progress</span></summary>
       <table>
         <thead><tr><th>Area</th><th>Status</th><th>What that means</th></tr></thead>
         <tbody>
-        <tr><td>mine traversal</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Four entrance round trips, the ridge cart, eight ladder pairs and both dark/light stair routes passed real interaction checks. Starting positions and the stair-test fungus were prepared fixtures; exact landings remain source-backed reconstructions. Fungus transport, cart puzzles, the lift, boss and rewards remain open.</td></tr>
-        <tr><td>quest-start persistence</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Zealot refusal, acceptance and re-talk passed real dialogue checks. Earned quest progress survived clean logout and login after a persistence fix. This covers the quest start; the complete mine quest remains open.</td></tr>
-        <tr><td>point levers</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>All eight levers toggled and restored their settings through real Pull actions. Distinct player settings and an all-zero setting survived clean relog; quest progress stayed unchanged. Toggle behavior is a source-backed reconstruction. Cart routing and delivery remain open.</td></tr>
-        <tr><td>crystal rewards</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>With a supplied key and prepared skills and positions, both reward doors opened in both directions. Missing-tool, low-level and full-inventory refusals passed. The first crystal cut awarded 2 quest points and 22,000 Strength XP; repeated cuts gave shards without repeating rewards, and progress and items survived relog. The boss and natural route remain unqualified; Salve combat has separate prepared checks below.</td></tr>
-        <tr><td>key-ring access</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>With supplied items, using the mine key on the steel key ring stored it and removed the physical key. Both reward doors then worked in both directions through Open and use-ring actions. Empty-ring and missing-ring refusals passed, and storage and access survived relog. Natural key and ring acquisition remain unqualified.</td></tr>
-        <tr><td>Salve stringing</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Using wool and a shard worked in both directions, including with a full inventory. Invalid and stale requests changed nothing, and crafted amulets persisted through relog. Ingredients were supplied fixtures; manual zero Crafting XP remains a later-source reconstruction. Shard acquisition and the full quest remain unqualified.</td></tr>
-        <tr><td>Salve combat</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Four prepared NPC combat cases and two player-combat controls passed, including ordinary melee, a whip special attack and clean logout. Wearing the amulet preserved the tested player-combat values. The 7/6 bonus is a source-backed reconstruction; these live samples do not measure the exact multiplier or verify its historical value. Accounts, equipment and NPCs were supplied fixtures; natural acquisition and the full quest remain unqualified.</td></tr>
-        <tr><td>glowing fungus</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Both mushroom types, repeat pickup, inventory-space refusal and dropping to ashes passed live checks. Picked fungus survived an internal ladder and became ashes on leaving the mine; a prepared death case confirmed it was neither kept nor dropped. Lifecycle behavior is a reconstruction from later sources. Cart delivery and the complete quest remain open.</td></tr>
+        <tr><td>complete quest route</td><td><span class="tag ship">VALIDATED RUN</span></td><td>One account went from the start to completion with only items, stats and positions prepared: Zealot start, mine entry, valve and lift, stairs, cart-delivered fungus, Treus Dayth, the reward door and the crystal cut. Rewards were given once, and the lift key could be returned afterwards.</td></tr>
+        <tr><td>cart puzzle</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The lever arrows, the eight successful settings, five failing settings, the cart ride and fungus delivery passed live checks. One 2006 screenshot of the Points Settings panel matches the game’s drawing of the same setting. The full success rule comes from later sources and stays a reconstruction.</td></tr>
+        <tr><td>lift and water</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Valve power, the timed race to the lift, the flooded arrival with lights and tinderboxes put out, and the exit passed live checks.</td></tr>
+        <tr><td>stairs and fungus</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Dark and lit stair landings, the secondary entrance, picking, dropping and leaving with fungus, and death (fungus turns to ashes) passed live checks.</td></tr>
+        <tr><td>Treus Dayth</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>The boss encounter, its hazards, the faded form, the death message (matched to a 2006 screenshot) and protection against other players joining someone else’s fight passed live checks. Hit chances and damage are Lost City’s values and stay reconstructions.</td></tr>
+        <tr><td>rewards</td><td><span class="tag ship">VALIDATED SLICE</span></td><td>Reward doors with the key or the steel key ring, leaving without a key, cut guards, 22,000 Strength XP and 2 quest points once, Salve stringing and journal text passed live checks.</td></tr>
         </tbody>
       </table>
     </details>
@@ -146,12 +144,12 @@
     <p class="lead">These are development results, not a claim that all changes have been released in the public source repositories. Rust must pass parity checks before becoming the default.</p>
 
     <h2>Quest inventory</h2>
-    <p class="lead">104 questlist rows. The 8 September inventory is updated here for Recruitment Drive’s M1 qualification. These categories describe evidence and remaining work, not a completion percentage.</p>
+    <p class="lead">104 questlist rows. The 8 September inventory is updated here for the M1 qualification of Recruitment Drive and Haunted Mine. These categories describe evidence and remaining work, not a completion percentage.</p>
     <table>
       <thead><tr><th>Category</th><th class="n">Count</th><th>Meaning</th></tr></thead>
       <tbody>
-        <tr><td>Residual quest behavior</td><td class="n">35</td><td>Progression, completion or rewards remain unfinished or unqualified.</td></tr>
-        <tr><td>M1 quest behavior qualified</td><td class="n">1</td><td>Recruitment Drive passed the agreed connected and focused checks with disclosed preparation. Full walking-route validation remains outstanding.</td></tr>
+        <tr><td>Residual quest behavior</td><td class="n">34</td><td>Progression, completion or rewards remain unfinished or unqualified.</td></tr>
+        <tr><td>M1 quest behavior qualified</td><td class="n">2</td><td>Recruitment Drive and Haunted Mine passed the agreed connected and focused checks with disclosed preparation. Full walking-route validation remains outstanding.</td></tr>
         <tr><td>Other quests awaiting connected validation</td><td class="n">62</td><td>Source trees exist; full playthrough evidence remains outstanding.</td></tr>
         <tr><td>Historical playthrough reports</td><td class="n">6</td><td>Prior reports for Cook’s Assistant, Sheep Shearer, Restless Ghost, Doric’s Quest, Witch’s Potion and Rune Mysteries. The retained evidence still needs build-specific reconciliation; these are not six fresh validations.</td></tr>
       </tbody>
@@ -167,9 +165,9 @@
 
     <section id="quests">
     <h2>Quest work remaining</h2>
-    <p class="lead">These 35 quests need remaining behavior completed or verified. Existing partial implementations are retained; the list describes what is needed to close each quest.</p>
+    <p class="lead">These 34 quests need remaining behavior completed or verified. Existing partial implementations are retained; the list describes what is needed to close each quest.</p>
     <details>
-      <summary>View all 35 quest packages</summary>
+      <summary>View all 34 quest packages</summary>
       <table class="quest-list">
         <thead><tr><th>Quest</th><th>Work to close</th></tr></thead>
         <tbody>
@@ -186,7 +184,6 @@
           <tr><td>A Fairy Tale Part I</td><td>Complete the cure, tool preparation, Tanglefoot and rewards.</td></tr>
           <tr><td>Recipe for Disaster</td><td>Complete every in-era guest rescue and final encounters.</td></tr>
           <tr><td>Mountain Daughter</td><td>Complete the cave route, Kendal encounter and burial.</td></tr>
-          <tr><td>Haunted Mine</td><td>Complete mine traversal, cart puzzles, Treus Dayth and the salve reward.</td></tr>
           <tr><td>Ratcatchers</td><td>Complete the cat quest and access to the rat pits.</td></tr>
           <tr><td>Tears of Guthix</td><td>Complete the quest and repeatable tears session with earned XP.</td></tr>
           <tr><td>Roving Elves</td><td>Complete consecration, planting and quest rewards.</td></tr>
